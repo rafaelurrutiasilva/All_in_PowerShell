@@ -8,4 +8,4 @@ It is not my intention to steal or take credit for others' work. My scripts are 
 ## Script Index
 Script | Function
 -------|---------
-|This PowerShell script retrieves all VMware Tanzu Supervisor Control Plane VMs and checks their disk usage. It outputs results for use as a Nagios check and also sends alerts to syslog if thresholds are exceeded.
+[check_tanzu_supervisor-controlplanes-disk.ps1](https://github.com/rafaelurrutiasilva/All_in_PowerShell/blob/main/bin/check_tanzu_supervisor-controlplanes-disk.ps1)|This PowerShell script retrieves all VMware Tanzu Supervisor Control Plane VMs and checks their disk usage. It outputs results for use as a Nagios check and also sends alerts to syslog if thresholds are exceeded.
