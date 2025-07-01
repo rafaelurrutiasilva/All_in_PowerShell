@@ -7,8 +7,8 @@ This script connects to vCenter, retrieves all Supervisor Control Plane VMs (by 
 checks their disk usage, outputs Nagios-compatible results and logs critical usage
 to syslog on Unix systems.
 
-.PARAMETER threshold
-Specifies the disk usage percentage threshold that triggers critical alerts. Default is 80.
+.PARAMETER vmName Specifies the VM that will be checked. Default is *SupervisorControlPlane*.
+threshold Specifies the disk usage percentage threshold that triggers critical alerts. Default is 80.
 
 .EXAMPLE
 .\check_supervisorVMsDisks.ps1 -threshold 90
