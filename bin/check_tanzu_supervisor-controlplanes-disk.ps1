@@ -1,6 +1,28 @@
-#
-# This PowerShell script connects to a vCenter server, identifies all VMware Tanzu Supervisor Control Plane virtual machines, and examines their disk utilization. It generates output formatted for Nagios monitoring, 
-# raising critical alerts if usage exceeds a configurable threshold (default 80%). Additionally, on Unix systems, it logs any critical events to syslog, enabling integration with broader infrastructure monitoring and alerting tools.
+<#
+.SYNOPSIS
+Checks disk usage on VMware Tanzu Supervisor Control Plane VMs for Nagios monitoring and syslog alerts.
+
+.DESCRIPTION
+This script connects to vCenter, retrieves all Supervisor Control Plane VMs,
+checks their disk usage, outputs Nagios-compatible results and logs critical usage
+to syslog on Unix systems.
+
+.PARAMETER threshold
+Specifies the disk usage percentage threshold that triggers critical alerts. Default is 80.
+
+.EXAMPLE
+.\check_supervisorVMsDisks.ps1 -threshold 90
+
+Runs the script with a threshold of 90%.
+
+.NOTES
+Author: Rafael.Urrutia.S@gmail.com
+
+
+.LINK
+https://github.com/rafaelurrutiasilva/All_in_PowerShell/edit/main/bin/check_tanzu_supervisor-controlplanes-disk.ps1
+#>
+
 
 param(
     [int]$threshold = 80
