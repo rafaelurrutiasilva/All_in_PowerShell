@@ -3,7 +3,7 @@
 Checks disk usage on VMware Tanzu Supervisor Control Plane VMs for Nagios monitoring and syslog alerts.
 
 .DESCRIPTION
-This script connects to vCenter, retrieves all Supervisor Control Plane VMs,
+This script connects to vCenter, retrieves all Supervisor Control Plane VMs (by default but other VMs name can be used),
 checks their disk usage, outputs Nagios-compatible results and logs critical usage
 to syslog on Unix systems.
 
@@ -25,15 +25,15 @@ https://github.com/rafaelurrutiasilva/All_in_PowerShell/edit/main/bin/check_tanz
 
 
 param(
+    [string]$vmName = "*SupervisorControlPlane*",
     [int]$threshold = 80
 )
-$scriptname = "check_supervisorVMsDisks"
+$scriptname = "check_supervisorVMsDisks.ps1"
 $syslogCmd = "/bin/logger"
 
 # Function to connect to vcenter server
 Connect-to-vcenter
-
-$supervisorVMs = (Get-VM -Name *SupervisorControlPlane*)
+$supervisorVMs = (Get-VM -Name $vmName)
 
 $alerts = @()
 $reportLines = @()
