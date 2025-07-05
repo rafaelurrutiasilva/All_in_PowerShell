@@ -10,4 +10,4 @@ It is not my intention to steal or take credit for others' work. My scripts are 
 Script | Function
 -------|---------
 [check_tanzu_supervisor-controlplanes-disk.ps1](/bin/check_tanzu_supervisor-controlplanes-disk.ps1)|This PowerShell script retrieves all VMware Tanzu Supervisor Control Plane VMs and checks their disk usage. It outputs results for use as a Nagios check and also sends alerts to syslog if thresholds are exceeded.
-[deploy_vm_from_ova_file.ps1](/bi/deploy_vm_from_ova_file.ps1>)|Deploy a VM from an OVA file using VMware Workstation or Player.
+[deploy_vm_from_ova_file.ps1](/bi/deploy_vm_from_ova_file.ps1)|Deploy a VM from an OVA file using VMware Workstation or Player.
